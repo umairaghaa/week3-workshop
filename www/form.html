@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> LOGIN FORM</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer async></script>
+</head>
+<body>
+    <div id=" 'container">
+        <div class = "nav">
+            <input type = "checkbox" id=" menu-toggle">
+            <Label for = "menu-toggle" class="menu-icon"> &#9776;</Label>
+            <nav class="menu">
+            
+            <ul>
+                <li><a href = "/">Login</a></li>
+                <li> <a href="./account">Account</a></li>
+            </ul>
+
+            </nav>
+        </div>
+        <div id=" logincard"
+        <form id="loginform" method="post">
+            <label for="email"> Email Address</label>
+            <input type= "email" name="email" id="email" />
+            <label for="upwd"> Password</label>
+            <input type ="password" name="upwd" id ="upwd" />
+            <button type = "submit">login</button>
+        </form>
+    </div>
+    <div id="errormsg" class = "hidemessage">Credentials do not match</div>
+    <div id="postResultDiv" data-results></div>
+  </div>
+</body>
+</html>
