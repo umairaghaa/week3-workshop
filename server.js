@@ -9,3 +9,7 @@ let server = http.listen(3001,function(){
     let port = server.address().port;
     console.log("Server listening on: "+ host + "port: " +port);
 });
+
+app.get('/test',function(req,res){
+    res.sendFile(__dirname + '/www/test.html');
+});
