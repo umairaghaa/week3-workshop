@@ -1,7 +1,7 @@
 module.exports = {
 
     route: (app) =>{
-        app.post('/api/login',function(req,res,next){
+        app.post('/api-login',function(req,res,next){
             let users = [
                 {'email': 'abc@com.au','pwd':'123'},
                 {'email': 'abd@com.au','pwd':'123'},

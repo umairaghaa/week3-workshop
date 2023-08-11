@@ -9,7 +9,7 @@ async function postData(){
     let email = document.getElementById('email').value;
     let upwd = document.getElementById('upwd').value;
     const data= {'email': email, 'upwd':upwd};
-    fetch("http://localhost:3001/api/login", {
+    fetch("http://localhost:3001/api-login", {
         method: 'POST',
         headers: {
             "Content-Type":"application/json",
