@@ -1,15 +1,13 @@
-var express = require('express');
+var express = require('express'); //used for routing
 var app = express();
-var http = require('http').Server(app);
+var http = require('http').Server(app); //used to provide http functionality
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+var path = require('path');
+let staticpath = path.resolve('../frontend/www');
+app.use(express.static(staticpath));
 
-app.use(express.static(__dirname + '/www'));
-
-let server = http.listen(3001,function(){
-    let host = server.address().address;
-    let port = server.address().port;
-    console.log("Server listening on: "+ host + "port: " +port);
-});
-
-app.get('/test',function(req,res){
-    res.sendFile(__dirname + '/www/test.html');
-});
+require('./routes/homepage.js').route(app,path);
+require('./routes/account.js').route(app,path);
+require('./routes/api-login.js').route(app);
+require('./listen.js').start(app);
